@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="assets/css/base/reset.css" rel="stylesheet">
+    <link href="assets/css/base/body.css" rel="stylesheet">
+    <link href="assets/css/base/variaveis.css" rel="stylesheet">
+    <link href="assets/css/header.css" rel="stylesheet">
+    <link href="assets/css/list.css" rel="stylesheet">
+    <link href="assets/css/add-card.css" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <section class="logo__wrapper">
+            <img src="assets/images/shopping_cart.svg" class="logo">
+        </section>
+    </section>
+    <section class="list__wrapper">
+        <section class="list__card">
+            <h1 class="list__title">Lista de Compras</h1>
+            <p class="list__text">Adicione os itens no campo abaixo.</p>
+            <section class="list" data-list>
+                <section class="list__item">
+                    <input class="item__line-through" type="checkbox" data-item="line-through">
+                    <p class="item__name">Arroz</p>
+                    <button class="item__delete" data-item="delete"></button>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="add__wrapper" data-card="add">        
+        <form class="add__form">
+            <p class="add__title" for="name" data-button="add-title">Adicionar itens à lista</p>
+            <button class="add__wrapper--close-btn hide" data-button="close"><img src="assets/images/close.svg" class="add__wrapper--close-img"></button>
+            <input class="add__input" id="name" type="text" placeholder="Qual é o nome do item?" data-input="item">
+            <button class="add__button" data-button="add">Adicionar item</button>
+        </form>
+    </section>
+    <script src="assets/scripts/main.js" type="module"></script>
+</body>
+</html>

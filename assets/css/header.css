@@ -1,0 +1,26 @@
+.header{
+    align-items: center;
+    background-image: url(../images/cooking-g2de40d7bd_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+}
+
+.logo__wrapper{
+    align-items: center;
+    background-color: var(--color-yellow);
+    border-radius: 10px;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    width: 100px;
+}
+
+.logo{
+    height: 75%;
+}
