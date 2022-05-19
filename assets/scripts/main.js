@@ -6,8 +6,7 @@ const btnAddTitle = document.querySelector('[data-button="add-title"]');
 const btnClose = document.querySelector('[data-button="close"]');
 const cardAdd = document.querySelector('[data-card="add"]');
 const btnAdd = document.querySelector('[data-button="add"]');
-const itens = document.querySelectorAll('[data-item="line-through"]');
-const deleteBtn = document.querySelectorAll('[data-item="delete"]');
+const list = document.querySelector('[data-list]');
 
 btnAddTitle.addEventListener('click', function(event){
     event.preventDefault();
@@ -26,16 +25,15 @@ btnAdd.addEventListener('click', function(event){
     addItem();
 });
 
-itens.forEach(item => {
-    item.addEventListener('change', function(){
-        lineTrough();
-    })
-})
+list.addEventListener('click', function(event){
+    const target = event.target;
+    if (target.dataset.item === 'name'){
+        lineTrough(target);
+    }
 
-deleteBtn.forEach(item => {
-    item.addEventListener('click', function(){
-        removeItem(item);
-    })
-})
+    if (target.dataset.item === 'delete'){
+        removeItem(target);
+    }
+});
 
-// COLOCAR O EVENTLISTENER NO DOCUMENTO OU NA LISTA PRA PODER CHAMAR AS FUNÇÕES DEPOIS DE INCLUIR ITENS
+

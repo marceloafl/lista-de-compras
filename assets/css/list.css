@@ -18,6 +18,7 @@
 .list__text{
     font-size: 1rem;
     color: var(--color-brown);
+    margin-bottom: .75rem;
     text-align: center;
 }
 
@@ -25,22 +26,19 @@
     margin: 1rem 0 0;
 }
 
-.item__line-through--wrapper{
-    border: 1px solid var(--color-brown);
-    border-radius: 50%;
-}
-
-.item__line-through{
-    opacity: 1;
+.item__name{
+    font-size: 1.25rem;
 }
 
 .list__item{
     align-items: center;
     border-top: 1px solid var(--color-grey);
     border-bottom: 1px solid var(--color-grey);
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     height: 32px;
+    padding: 0 .5rem;
     width: 100%;
 }
 
@@ -52,7 +50,7 @@
     background-image: url(../images/delete_icon.svg);
     background-size: cover;
     border: none;
-    height: 100%;
-    width: 32px;
+    height: 24px;
+    width: 24px;
 }
 
