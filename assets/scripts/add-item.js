@@ -2,12 +2,14 @@ import { inputValidity } from "./validade-input.js";
 
 const list = document.querySelector('[data-list]');
 const itemInput = document.querySelector('[data-input="item"]');
+const msgSuccess = document.querySelector('[data-msg="success"]');
 
 export function addItem(itemInput){
     const item = itemInput.value;
 
     if (inputValidity(item)){
         criaItem(item);
+        successMsg();
         getFocus();
         resetInput();
     } else {
@@ -47,4 +49,11 @@ function inputWarning(){
      setTimeout(function(){
         itemInput.classList.remove('add__input--warning');
      }, 2000)
+}
+
+function successMsg(){
+    msgSuccess.classList.remove('hide');
+    setTimeout(function(){
+        msgSuccess.classList.add('hide');
+    }, 1000)
 }
