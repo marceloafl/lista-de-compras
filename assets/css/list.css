@@ -1,4 +1,4 @@
-.list__card{
+.list__wrapper{
     background-color: var(--color-white);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -27,6 +27,7 @@
 }
 
 .item__name{
+    cursor: pointer;
     font-size: 1.25rem;
 }
 
@@ -37,7 +38,7 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    height: 32px;
+    height: 36px;
     padding: 0 .5rem;
     width: 100%;
 }
@@ -50,7 +51,18 @@
     background-image: url(../images/delete_icon.svg);
     background-size: cover;
     border: none;
+    cursor: pointer;
     height: 24px;
     width: 24px;
+}
+
+@media screen and (min-width: 768px){
+    .list__wrapper{
+        grid-area: list;
+    }
+
+    .list__wrapper{
+        transform: translateY(0);
+    }
 }
 

@@ -1,11 +1,18 @@
-const itemInput = document.querySelector('[data-input="item"]');
-const list = document.querySelector('[data-list]');
+import { inputValidity } from "./validade-input.js";
 
-export function addItem(){
+const list = document.querySelector('[data-list]');
+const itemInput = document.querySelector('[data-input="item"]');
+
+export function addItem(itemInput){
     const item = itemInput.value;
-    criaItem(item);
-    getFocus();
-    resetInput();
+
+    if (inputValidity(item)){
+        criaItem(item);
+        getFocus();
+        resetInput();
+    } else {
+        inputWarning();
+    }
 }
 
 function criaItem(item){
@@ -33,4 +40,11 @@ function resetInput(){
 
 function getFocus(){
     itemInput.focus();
+}
+
+function inputWarning(){
+    itemInput.classList.add('add__input--warning');
+     setTimeout(function(){
+        itemInput.classList.remove('add__input--warning');
+     }, 2000)
 }
